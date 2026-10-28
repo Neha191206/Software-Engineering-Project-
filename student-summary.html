@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Attendance - College Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+      <section class="panel" id="profile"></section>
+      <div class="cards" id="stats"></div>
+      <div id="lowNote"></div>
+      <section class="panel">
+        <div class="panel-head"><h2>Subject-wise attendance</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Subject</th><th>Attended</th><th>Total</th><th>Percentage</th><th>Progress</th></tr></thead>
+          <tbody id="subjectRows"></tbody>
+        </table></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>Attendance history</h2>
+          <div style="min-width:220px"><label for="histSubject" class="no-print">Filter by subject</label><select id="histSubject"></select></div>
+        </div>
+        <div class="table-wrap scroll-box"><table>
+          <thead><tr><th>Date</th><th>Subject</th><th>Status</th></tr></thead>
+          <tbody id="histRows"></tbody>
+        </table></div>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/student-summary.js"></script>
+</body>
+</html>

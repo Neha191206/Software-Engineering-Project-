@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark Attendance - College Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+      <div id="msg" class="alert" role="status" hidden></div>
+      <section class="panel">
+        <div class="panel-head"><h2>Step 1: Select class and subject</h2></div>
+        <div class="form-grid">
+          <div class="field"><label for="classSel">Class</label><select id="classSel"></select></div>
+          <div class="field"><label for="subjectSel">Subject</label><select id="subjectSel"></select></div>
+          <div class="field"><label for="dateInp">Attendance date</label><input id="dateInp" type="date"></div>
+          <div class="field"><button class="btn" id="loadBtn" type="button" style="width:100%">Load Students</button></div>
+        </div>
+      </section>
+      <section class="panel" id="listPanel" hidden>
+        <div class="panel-head"><h2 id="listTitle">Students</h2></div>
+        <div class="btn-row no-print" style="margin:0 0 1rem">
+          <button class="btn secondary small" id="allPresent" type="button">Mark All Present</button>
+          <button class="btn secondary small" id="allAbsent" type="button">Mark All Absent</button>
+          <button class="btn secondary small" id="resetSel" type="button">Reset Selection</button>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Roll Number</th><th>Student Name</th><th>Status</th></tr></thead>
+          <tbody id="studentRows"></tbody>
+        </table></div>
+        <div class="btn-row"><button class="btn" id="saveBtn" type="button">Save Attendance</button></div>
+      </section>
+      <section class="panel" id="confirmPanel" hidden></section>
+    </main>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/attendance.js"></script>
+</body>
+</html>

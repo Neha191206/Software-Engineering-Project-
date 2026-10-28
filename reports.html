@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attendance Reports - College Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+      <div id="msg" class="alert error" role="alert" hidden></div>
+      <section class="panel no-print">
+        <div class="panel-head"><h2>Report filters</h2></div>
+        <div class="form-grid">
+          <div class="field"><label for="fClass">Class</label><select id="fClass"></select></div>
+          <div class="field"><label for="fSubject">Subject</label><select id="fSubject"></select></div>
+          <div class="field"><label for="fStudent">Student</label><select id="fStudent"></select></div>
+          <div class="field"><label for="fStart">Start date</label><input id="fStart" type="date"></div>
+          <div class="field"><label for="fEnd">End date</label><input id="fEnd" type="date"></div>
+        </div>
+        <div class="btn-row"><button class="btn" id="apply" type="button">Apply Filters</button><button class="btn secondary" id="clear" type="button">Clear Filters</button></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>Attendance report</h2>
+          <button class="btn secondary small no-print" id="printBtn" type="button">Print Report</button>
+          <button class="btn secondary small no-print" id="csvBtn" type="button">Export CSV</button>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Roll Number</th><th>Student Name</th><th>Subject</th><th>Total Classes</th><th>Classes Attended</th><th>Classes Absent</th><th>Attendance Percentage</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table></div>
+        <p class="summary-line" id="summary"></p>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/reports.js"></script>
+</body>
+</html>

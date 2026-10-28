@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login - College Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+  <div class="login-band">
+    <h1>College Attendance Management System</h1>
+    <p>Sign in to mark, track and review attendance</p>
+  </div>
+  <div class="login-wrap">
+    <div class="login-box">
+      <h2>Sign in</h2>
+      <div id="loginMsg" class="alert error" role="alert" hidden></div>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="role">Role</label>
+          <select id="role">
+            <option value="">Select role</option>
+            <option value="admin">Administrator</option>
+            <option value="faculty">Faculty</option>
+            <option value="student">Student</option>
+          </select>
+          <span class="err" id="roleErr"></span>
+        </div>
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" type="text" autocomplete="username">
+          <span class="err" id="usernameErr"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password">
+          <span class="err" id="passwordErr"></span>
+        </div>
+        <button class="btn" type="submit" style="width:100%">Login</button>
+      </form>
+    </div>
+    <div class="login-box demo-box">
+      <h2>Demo credentials</h2>
+      <p>Click a row to fill the form.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Role</th><th>Username</th><th>Password</th></tr></thead>
+          <tbody>
+            <tr data-demo="admin,admin123,admin"><td>Administrator</td><td>admin</td><td>admin123</td></tr>
+            <tr data-demo="faculty1,fac123,faculty"><td>Faculty</td><td>faculty1</td><td>fac123</td></tr>
+            <tr data-demo="student1,stu123,student"><td>Student</td><td>student1</td><td>stu123</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">More accounts: faculty2 / fac456, and student2 to student5 / stu123. These credentials are for a local educational demo only and are not production-grade security.</p>
+      <button type="button" class="link-btn" id="resetDemo">Reset demo data</button>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
